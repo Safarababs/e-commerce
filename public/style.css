@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap&family=Noto Nastaliq Urdu");
 * {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -42,46 +42,18 @@ html {
 header .header-1 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 1.5rem;
-  width: 100%;
+  width: 100vw;
   z-index: 1000;
 }
-header .header-1 .logo {
+header .header-1 .form-container {
+  width: 100%;
+}
+header .header-1 .form-container marquee {
   font-size: 2rem;
-  color: #666;
 }
-header .header-1 .logo i {
-  color: #2980b9;
-}
-header .header-1 .form-container form {
-  display: flex;
-}
-header .header-1 .form-container form #search {
-  height: 4rem;
-  width: 50rem;
-  outline: none;
-  border: 0.2rem solid #666;
-  font-size: 1.5rem;
-  padding: 0 1rem;
-}
-header .header-1 .form-container form #search:focus {
-  border-color: #2980b9;
-}
-header .header-1 .form-container form label {
-  height: 4rem;
-  width: 5rem;
-  text-align: center;
-  line-height: 4rem;
-  font-size: 2rem;
-  cursor: pointer;
-  background: #2980b9;
-  color: #fff;
-}
-header .header-1 .form-container form label:hover {
-  color: yellow;
-}
-header .header-2 {
+
+.header-2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,75 +62,74 @@ header .header-2 {
   z-index: 1000;
   background: #2980b9;
 }
-header .header-2 .navbar ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header .header-2 .navbar ul li {
-  margin: 0 1rem;
-}
-header .header-2 .navbar ul li a {
-  font-size: 2rem;
-  color: #fff;
-}
-header .header-2 .navbar ul li a:active {
-  background: red;
-  border-radius: 2rem;
-}
-header .header-2 .navbar ul li a:hover {
-  color: yellow;
-}
-header .header-2 .icons a {
-  color: #fff;
-  font-size: 2rem;
-  padding: 0 1rem;
-}
-header .header-2 .icons a:hover {
-  color: yellow;
-}
-header .header-2 #menu {
+.header-2 #menu {
   font-size: 3rem;
   color: #fff;
   cursor: pointer;
   display: none;
 }
-header .header-2 .header-active {
+.header-2 .logo {
+  font-size: 2rem;
+  color: #fff;
+}
+.header-2 .logo i {
+  color: #fff;
+}
+.header-2 .navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-2 .navbar ul li {
+  margin: 0 1rem;
+}
+.header-2 .navbar ul li a {
+  font-size: 2rem;
+  color: #fff;
+}
+.header-2 .navbar ul li a:active {
+  background: red;
+  border-radius: 2rem;
+}
+.header-2 .navbar ul li a:hover {
+  color: yellow;
+}
+.header-2 .icons a {
+  color: #fff;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+.header-2 .icons a:hover {
+  color: yellow;
+}
+
+.header-2.header-active {
   position: fixed;
   top: 0;
   left: 0;
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 
-.home .home-slider .item {
-  position: relative;
+.landing {
+  height: 70vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/deal1.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
 }
-.home .home-slider .item img {
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-.home .home-slider .item .content {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-}
-.home .home-slider .item .content h3 {
+.landing h1 {
+  font-size: 6rem;
   color: #fff;
+  text-align: center;
   text-shadow: 0 0.3rem 0.5rem #000;
-  font-size: 5rem;
   text-transform: uppercase;
 }
-.home .home-slider .item .content p {
-  color: #fff;
-  font-size: 2.5rem;
-  padding: 2rem 0;
-  width: 50rem;
-}
-.home .home-slider .item .content a button {
+.landing .btn {
   height: 4rem;
   width: 14rem;
   background: #2980b9;
@@ -168,31 +139,9 @@ header .header-2 .header-active {
   border: none;
   outline: none;
 }
-.home .home-slider .item .content a button:hover {
+.landing .btn:hover {
   letter-spacing: 0.2rem;
   opacity: 0.8;
-}
-.home .owl-carousel .owl-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  outline: none;
-  left: 1.3rem;
-}
-.home .owl-carousel .owl-prev span {
-  color: #fff;
-  font-size: 7rem;
-}
-.home .owl-carousel .owl-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  outline: none;
-  right: 1.3rem;
-}
-.home .owl-carousel .owl-next span {
-  color: #fff;
-  font-size: 7rem;
 }
 
 .arrival {
@@ -222,20 +171,23 @@ header .header-2 .header-active {
   margin: 0 auto;
 }
 .arrival .box-container .box {
-  flex: 1 1 30rem;
+  height: 40rem;
+  width: 35rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
   margin: 1rem 2rem;
 }
 .arrival .box-container .box .image {
-  height: 20rem;
+  height: 30rem;
+  width: 100%;
   padding: 2rem;
   text-align: center;
   background: #f0f0f0;
 }
 .arrival .box-container .box .image img {
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -260,15 +212,25 @@ header .header-2 .header-active {
   font-size: 1.5rem;
   text-decoration: line-through;
 }
-.arrival .box-container .box .info .subInfo .stars i {
-  color: orange;
-  font-size: 1.5rem;
+.arrival .box-container .box .info .subInfo .stars a .btn {
+  height: 4rem;
+  width: 14rem;
+  background: #2980b9;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.arrival .box-container .box .info .subInfo .stars a .btn:hover {
+  letter-spacing: 0.2rem;
+  opacity: 0.8;
 }
 .arrival .box-container .box .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 20rem;
+  height: 40rem;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
   display: flex;
@@ -331,9 +293,12 @@ header .header-2 .header-active {
   align-items: center;
 }
 .feature .row .image-container .big-image img {
-  height: 30rem;
+  height: 40rem;
   margin: 2rem 0;
   filter: drop-shadow(0 0.1rem 0.5rem #000);
+}
+.feature .row .image-container .big-image img:hover {
+  transform: scale(1.5);
 }
 .feature .row .image-container .small-image {
   display: flex;
@@ -401,7 +366,7 @@ header .header-2 .header-active {
 }
 
 .gallery {
-  height: 100vh;
+  height: auto;
 }
 .gallery .heading {
   padding-top: 7rem;
@@ -456,13 +421,15 @@ header .header-2 .header-active {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column;
   margin: 2rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.3);
-  flex: 1 1 30rem;
+  height: 40rem;
+  width: 40rem;
 }
 .gallery .image-container .box .image {
-  height: 12rem;
-  width: 20rem;
+  height: 30rem;
+  width: 40rem;
   text-align: center;
   padding: 1rem;
   background: #f0f0f0;
@@ -475,6 +442,7 @@ header .header-2 .header-active {
 }
 .gallery .image-container .box:hover .image {
   background: #ccc;
+  transform: scale(1.5);
 }
 .gallery .image-container .box .info {
   width: 100%;
@@ -496,9 +464,20 @@ header .header-2 .header-active {
   color: #ff3300;
   font-size: 2rem;
 }
-.gallery .image-container .box .info .subInfo .stars i {
-  color: orange;
-  font-size: 1.5rem;
+.gallery .image-container .box .info .subInfo .stars a .btn {
+  height: 4rem;
+  width: 14rem;
+  background: #2980b9;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-right: 1rem;
+}
+.gallery .image-container .box .info .subInfo .stars a .btn:hover {
+  letter-spacing: 0.2rem;
+  opacity: 0.8;
 }
 
 .deal {
@@ -599,7 +578,7 @@ header .header-2 .header-active {
 }
 
 .newsletter {
-  background: linear-gradient(#2980b9, #2980b9), url("./images/deal1.jpg") no-repeat;
+  background: linear-gradient(#2980b9, #2980b9), url("./images/deal1.jpeg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
@@ -790,5 +769,8 @@ header .header-2 .header-active {
   }
   header .header-1 .logo {
     padding-bottom: 1.5rem;
+  }
+  .footer .box-container .box:nth-child(2) {
+    text-align: left;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,56 +1,34 @@
-import img1 from "./images/home_img1.jpg";
-import img2 from "./images/home_img2.jpg";
-import img3 from "./images/home_img3.jpg";
-import img4 from "./images/home_img4.jpg";
-
-
-
+import React from "react";
 
 function Home() {
-    return (
-        <section className="home" id="home">
+  return (
+    <>
+      <section className="landing" id="home">
+        <h1>
+          Hijab-e-fatimei <br></br>lets be an islamic women
+        </h1>
+        <a href="https://wa.me/923427714021/?text=I%20need%20some%20information%20can%20i%20?">
+          <button className="btn">get started</button>
+        </a>
+      </section>
 
-            <div className="home-slider owl-carousel">
-
-                <div className="item">
-                    <img src={img1} alt="not supported in your browser contact developer" />
-                    <div className="content">
-                        <h3>heavy discounts</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque.</p>
-                        <a href="#"><button className="btn">discover</button></a>
-                    </div>
-                </div>
-
-                <div className="item">
-                    <img src={img2} alt="not supported in your browser contact developer" />
-                    <div className="content">
-                        <h3>latest gadegts</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque.</p>
-                        <a href="#"><button className="btn">discover</button></a>
-                    </div>
-                </div>
-
-                <div className="item">
-                    <img src={img3} alt="not supported in your browser contact developer" />
-                    <div className="content">
-                        <h3>trending shoes</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque.</p>
-                        <a href="#"><button className="btn">discover</button></a>
-                    </div>
-                </div>
-
-                <div className="item">
-                    <img src={img4} alt="not supported in your browser contact developer" />
-                    <div className="content">
-                        <h3>fresh groceries</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque.</p>
-                        <a href="#"><button className="btn">discover</button></a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    )
+      <header>
+        <div className="header-1">
+          <div className="form-container">
+            <marquee
+              direction="left"
+              scrollamount="8"
+              style={{ textTransform: "none" }}
+            >
+              Hijab-e-Fatimi's aim is to spread sunna of Syeda Fatima Zahra s.A.
+              She says to her belovers that women's favourite ornament is abaya
+              through which she can live in janna forever.
+            </marquee>
+          </div>
+        </div>
+      </header>
+    </>
+  );
 }
 
 export default Home;

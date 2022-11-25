@@ -1,15 +1,11 @@
-function NewsLetter(){
-    return (
-        <section className="newsletter">
-            <h1>newsletter</h1>
-            <p>get in touch for latest discounts and updates</p>
+import Prayers from "./prayers";
 
-            <form action="">
-                <input type="email" placeholer="enter your email" ></input>
-                <input type="submit" className="btn"></input>
-            </form>
-        </section>
-    )
+function NewsLetter() {
+  return (
+    <section className="newsletter">
+      <Prayers />
+    </section>
+  );
 }
 
 export default NewsLetter;
